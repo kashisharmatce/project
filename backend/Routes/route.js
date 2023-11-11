@@ -9,7 +9,9 @@ const {
   deleteCourse,
 } = require("../Controllers/courseController");
 const { verifyToken } = require("../middleware/mid");
-
+router.get('/', (req,res)=>{
+  res.send("Router Method!!")
+} )
 router.post("/register", StudentController.createStudent);
 router.post("/login", StudentController.loginStudent);
 
